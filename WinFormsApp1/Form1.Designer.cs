@@ -61,9 +61,10 @@
             scoreButton.BackgroundImageLayout = ImageLayout.Stretch;
             scoreButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             scoreButton.ForeColor = SystemColors.ControlText;
-            scoreButton.Location = new Point(12, 160);
+            scoreButton.Location = new Point(10, 120);
+            scoreButton.Margin = new Padding(3, 2, 3, 2);
             scoreButton.Name = "scoreButton";
-            scoreButton.Size = new Size(237, 56);
+            scoreButton.Size = new Size(207, 42);
             scoreButton.TabIndex = 0;
             scoreButton.Text = "Cut a Low Taper Fade";
             scoreButton.UseVisualStyleBackColor = true;
@@ -73,9 +74,9 @@
             // 
             scoreLabel.AutoSize = true;
             scoreLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            scoreLabel.Location = new Point(38, 351);
+            scoreLabel.Location = new Point(31, 221);
             scoreLabel.Name = "scoreLabel";
-            scoreLabel.Size = new Size(77, 31);
+            scoreLabel.Size = new Size(63, 25);
             scoreLabel.TabIndex = 1;
             scoreLabel.Text = "Fades:";
             scoreLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -83,9 +84,10 @@
             // 
             // upgradeClickPower
             // 
-            upgradeClickPower.Location = new Point(6, 120);
+            upgradeClickPower.Location = new Point(5, 90);
+            upgradeClickPower.Margin = new Padding(3, 2, 3, 2);
             upgradeClickPower.Name = "upgradeClickPower";
-            upgradeClickPower.Size = new Size(164, 69);
+            upgradeClickPower.Size = new Size(144, 52);
             upgradeClickPower.TabIndex = 2;
             upgradeClickPower.Text = "Upgrade Click";
             upgradeClickPower.UseVisualStyleBackColor = true;
@@ -101,9 +103,10 @@
             upgradeCPS1Button.BackgroundImageLayout = ImageLayout.Stretch;
             upgradeCPS1Button.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             upgradeCPS1Button.ForeColor = SystemColors.InactiveCaptionText;
-            upgradeCPS1Button.Location = new Point(6, 120);
+            upgradeCPS1Button.Location = new Point(5, 90);
+            upgradeCPS1Button.Margin = new Padding(3, 2, 3, 2);
             upgradeCPS1Button.Name = "upgradeCPS1Button";
-            upgradeCPS1Button.Size = new Size(176, 76);
+            upgradeCPS1Button.Size = new Size(154, 57);
             upgradeCPS1Button.TabIndex = 3;
             upgradeCPS1Button.Text = "Buy Tralalero Tralala Barber";
             upgradeCPS1Button.UseVisualStyleBackColor = true;
@@ -118,9 +121,10 @@
             // 
             button1.BackgroundImage = Properties.Resources.bg_f8f8f8_flat_750x_075_f_pad_750x1000_f8f8f8;
             button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.Location = new Point(56, 65);
+            button1.Location = new Point(49, 49);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(154, 89);
+            button1.Size = new Size(135, 67);
             button1.TabIndex = 4;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
@@ -129,9 +133,10 @@
             // 
             button2.BackgroundImage = Properties.Resources._61_1HFujrqL__AC_UF894_1000_QL80_;
             button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.Location = new Point(18, 15);
+            button2.Location = new Point(16, 11);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(143, 101);
+            button2.Size = new Size(125, 76);
             button2.TabIndex = 5;
             button2.UseVisualStyleBackColor = true;
             // 
@@ -139,9 +144,10 @@
             // 
             button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
             button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.Location = new Point(18, 15);
+            button3.Location = new Point(16, 11);
+            button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
-            button3.Size = new Size(143, 102);
+            button3.Size = new Size(125, 76);
             button3.TabIndex = 6;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
@@ -151,10 +157,11 @@
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage3);
-            tabControl1.Location = new Point(447, 237);
+            tabControl1.Location = new Point(391, 178);
+            tabControl1.Margin = new Padding(3, 2, 3, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(387, 235);
+            tabControl1.Size = new Size(339, 176);
             tabControl1.TabIndex = 7;
             // 
             // tabPage2
@@ -162,10 +169,11 @@
             tabPage2.Controls.Add(label1);
             tabPage2.Controls.Add(upgradeClickPower);
             tabPage2.Controls.Add(button3);
-            tabPage2.Location = new Point(4, 29);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(379, 202);
+            tabPage2.Padding = new Padding(3, 2, 3, 2);
+            tabPage2.Size = new Size(331, 148);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Upg Click";
             tabPage2.UseVisualStyleBackColor = true;
@@ -173,9 +181,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(164, 42);
+            label1.Location = new Point(144, 32);
             label1.Name = "label1";
-            label1.Size = new Size(201, 20);
+            label1.Size = new Size(159, 15);
             label1.TabIndex = 7;
             label1.Text = "Upgrade your fade efficiency";
             label1.Click += label1_Click_1;
@@ -186,19 +194,20 @@
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(upgradeCPS1Button);
             tabPage1.Controls.Add(button2);
-            tabPage1.Location = new Point(4, 29);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Margin = new Padding(3, 2, 3, 2);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(379, 202);
+            tabPage1.Padding = new Padding(3, 2, 3, 2);
+            tabPage1.Size = new Size(331, 148);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "TT Barber";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
-            label2.Location = new Point(182, 36);
+            label2.Location = new Point(159, 27);
             label2.Name = "label2";
-            label2.Size = new Size(155, 55);
+            label2.Size = new Size(136, 41);
             label2.TabIndex = 6;
             label2.Text = "Hire a Tralalero Tralala to cut fades for you";
             // 
@@ -207,19 +216,20 @@
             tabPage3.Controls.Add(label3);
             tabPage3.Controls.Add(button5);
             tabPage3.Controls.Add(button4);
-            tabPage3.Location = new Point(4, 29);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Margin = new Padding(3, 2, 3, 2);
             tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(379, 202);
+            tabPage3.Padding = new Padding(3, 2, 3, 2);
+            tabPage3.Size = new Size(331, 148);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Upg VIP";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
-            label3.Location = new Point(182, 36);
+            label3.Location = new Point(159, 27);
             label3.Name = "label3";
-            label3.Size = new Size(155, 64);
+            label3.Size = new Size(136, 48);
             label3.TabIndex = 8;
             label3.Text = "Buy advertising to attract VIPs to your Barber Shop";
             // 
@@ -227,9 +237,10 @@
             // 
             button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
             button5.BackgroundImageLayout = ImageLayout.Stretch;
-            button5.Location = new Point(18, 15);
+            button5.Location = new Point(16, 11);
+            button5.Margin = new Padding(3, 2, 3, 2);
             button5.Name = "button5";
-            button5.Size = new Size(143, 101);
+            button5.Size = new Size(125, 76);
             button5.TabIndex = 6;
             button5.UseVisualStyleBackColor = true;
             // 
@@ -238,9 +249,10 @@
             button4.BackgroundImageLayout = ImageLayout.Stretch;
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = SystemColors.InactiveCaptionText;
-            button4.Location = new Point(6, 120);
+            button4.Location = new Point(5, 90);
+            button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
-            button4.Size = new Size(176, 76);
+            button4.Size = new Size(154, 57);
             button4.TabIndex = 4;
             button4.Text = "Buy Advertising";
             button4.UseVisualStyleBackColor = true;
@@ -248,16 +260,17 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(846, 484);
+            ClientSize = new Size(740, 363);
             Controls.Add(scoreLabel);
             Controls.Add(tabControl1);
             Controls.Add(button1);
             Controls.Add(scoreButton);
             DoubleBuffered = true;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;

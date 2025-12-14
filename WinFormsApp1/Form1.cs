@@ -22,6 +22,10 @@ namespace WinFormsApp1
             scoreLabel.Text = scoreText;
             giveCPS1.Start();
             updateUpgradeButtonsTimer.Start();
+            tabPage2.Text = "Upg Click";
+            tabPage1.Text = "Locked!";  //idk why but tabPage2 is the leftmost tab and tabPage1 is the second, so uh, that's fun ig
+            tabPage3.Text = "Locked!";
+
 
         }
 
@@ -65,6 +69,11 @@ namespace WinFormsApp1
                 upgradeClickPower.Text = "Multiplier: " + clickUpgrade + ", Cost to upgrade: " + clickUpgradeCost;
                 scoreLabel.Text = scoreText + score.ToString();
 
+                if (clickUpgrade > 9)
+                {
+                    tabPage1.Text = "TT Barber";
+                }
+
             }
             else
             {
@@ -84,7 +93,10 @@ namespace WinFormsApp1
 
                 scoreLabel.Text = "Low Taper Fades: " + score.ToString();
                 upgradeCPS1Button.Text = "Barbers: " + cpsUpgrade1 + ", Cost to upgrade: " + cpsUpgrade1Cost;
-
+                if (cpsUpgrade1 > 19)
+                {
+                    tabPage3.Text = "Upg Advrt";
+                }
 
             }
             else
@@ -92,6 +104,7 @@ namespace WinFormsApp1
                 upgradeCPS1Button.Text = "too broke :3";
             }
         }
+
 
         private void giveCPS1_Tick(object sender, EventArgs e)
         {
