@@ -120,7 +120,7 @@ namespace WinFormsApp1
                     score = score + cpsUpgrade1;
                     scoreLabel.Text = scoreText + score.ToString();
                 }
-                    
+                        
             }
 
         }
@@ -132,7 +132,7 @@ namespace WinFormsApp1
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        {   
 
         }
 
