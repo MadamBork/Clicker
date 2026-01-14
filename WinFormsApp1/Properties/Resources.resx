@@ -124,4 +124,22 @@
   <data name="61-1HFujrqL._AC_UF894,1000_QL80_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\61-1HFujrqL._AC_UF894,1000_QL80_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="markStatic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\markstatic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="markGif1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\markGif1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="markGif2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\markGif2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="markGif3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\markGif3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="markGif4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\markGif4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="markGif5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\markGif5.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

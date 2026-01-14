@@ -1,3 +1,4 @@
+using System.Diagnostics.Eventing.Reader;
 using System.Security.Cryptography;
 
 namespace WinFormsApp1
@@ -15,16 +16,23 @@ namespace WinFormsApp1
         double CPS1FPS = 0;
         string scoreText = "Fades Cut: ";
         Random random = new Random();
+        int currentMarkGif = 1;
+
+
+
 
         public Form1()
         {
             InitializeComponent();
-            scoreLabel.Text = scoreText;
+            label4.Text = scoreText;
             giveCPS1.Start();
             updateUpgradeButtonsTimer.Start();
             tabPage2.Text = "Upg Click";
             tabPage1.Text = "Locked!";  //idk why but tabPage2 is the leftmost tab and tabPage1 is the second, so uh, that's fun ig
             tabPage3.Text = "Locked!";
+            tabPage4.Text = "Locked!";
+            markiplierCamPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
 
 
         }
@@ -35,16 +43,16 @@ namespace WinFormsApp1
             if (tempNumber < vipCritChance)
             {
                 score = score + (clickUpgrade * 2);
-                scoreLabel.Text = scoreText + score.ToString();
+                label4.Text = scoreText + score.ToString();
             }
             else
             {
                 score = score + clickUpgrade;
-                scoreLabel.Text = scoreText + score.ToString();
+                label4.Text = scoreText + score.ToString();
             }
 
-            
-            scoreLabel.Text = scoreText + score.ToString();
+
+            label4.Text = scoreText + score.ToString();
             upgradeClickPower.Text = "Multiplier: " + clickUpgrade + ", Cost to upgrade: " + clickUpgradeCost;
             upgradeCPS1Button.Text = "Barbers: " + cpsUpgrade1 + ", Cost to upgrade: " + cpsUpgrade1Cost;
             button4.Text = "Advertising effect chance: " + vipUpgrade + "%, Cost to upgrade: " + vipUpgradeCost;
@@ -58,16 +66,60 @@ namespace WinFormsApp1
 
         }
 
+        public void newMarkImage()
+        {
+            double markGifLength = 1;
+            currentMarkGif++;
+            if (currentMarkGif > 5)
+            {
+                currentMarkGif = 1;
+            }
+
+            switch (currentMarkGif)
+            {
+                case 1:
+                    markGifLength = 13.5; //sets to length of gif in seconds
+                    markiplierCamPictureBox.Image = Properties.Resources.markGif1;
+                    break;
+                case 2:
+                    markGifLength = 2.24;
+                    markiplierCamPictureBox.Image = Properties.Resources.markGif2;
+                    break;
+                case 3:
+                    markGifLength = 4.6;
+                    markiplierCamPictureBox.Image = Properties.Resources.markGif3;
+                    break;
+                case 4:
+                    markGifLength = 7.2;
+                    markiplierCamPictureBox.Image = Properties.Resources.markGif4;
+                    break;
+                case 5:
+                    markGifLength = 4.34;
+                    markiplierCamPictureBox.Image = Properties.Resources.markGif5;
+                    break;
+                default:
+                    markGifLength = 13.5;
+                    markiplierCamPictureBox.Image = Properties.Resources.markGif1;
+                    break;
+            }
+
+            markiplierCamPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            markiplierImageResetTimer.Interval = (int)(markGifLength * 1000); //converts to milliseconds
+
+            markiplierImageResetTimer.Stop();
+            markiplierImageResetTimer.Start();
+        }
         private void upgradeClickPower_Click(object sender, EventArgs e)
         {
             if (score > (clickUpgradeCost - 1))
             {
+                newMarkImage();
                 clickUpgrade = clickUpgrade + 1;
                 score = score - clickUpgradeCost;
 
                 clickUpgradeCost = ((10 * clickUpgrade) + ((int)((2 * clickUpgrade) / 3) + 1));
                 upgradeClickPower.Text = "Multiplier: " + clickUpgrade + ", Cost to upgrade: " + clickUpgradeCost;
-                scoreLabel.Text = scoreText + score.ToString();
+                label4.Text = scoreText + score.ToString();
 
                 if (clickUpgrade > 9)
                 {
@@ -86,12 +138,12 @@ namespace WinFormsApp1
         {
             if (score > (cpsUpgrade1Cost - 1))
             {
-
+                newMarkImage();
                 score = score - cpsUpgrade1Cost;
                 cpsUpgrade1 = cpsUpgrade1 + 1;
                 cpsUpgrade1Cost = (((cpsUpgrade1 * 5) + (int)(cpsUpgrade1 / 2)) + 1);
 
-                scoreLabel.Text = "Low Taper Fades: " + score.ToString();
+                label4.Text = "Low Taper Fades: " + score.ToString();
                 upgradeCPS1Button.Text = "Barbers: " + cpsUpgrade1 + ", Cost to upgrade: " + cpsUpgrade1Cost;
                 if (cpsUpgrade1 > 19)
                 {
@@ -110,17 +162,18 @@ namespace WinFormsApp1
         {
             if (cpsUpgrade1 > 0)
             {
-                int tempNumber = random.Next(1,100);
+                int tempNumber = random.Next(1, 100);
                 if (tempNumber < vipCritChance)
                 {
                     score = score + (cpsUpgrade1 * 2);
-                    scoreLabel.Text = scoreText + score.ToString();
-                } else
+                    label4.Text = scoreText + score.ToString();
+                }
+                else
                 {
                     score = score + cpsUpgrade1;
-                    scoreLabel.Text = scoreText + score.ToString();
+                    label4.Text = scoreText + score.ToString();
                 }
-                        
+
             }
 
         }
@@ -132,7 +185,7 @@ namespace WinFormsApp1
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {   
+        {
 
         }
 
@@ -172,13 +225,13 @@ namespace WinFormsApp1
             {
                 if (score > (vipUpgradeCost - 1))
                 {
-
+                    newMarkImage();
                     score = score - vipUpgradeCost;
                     vipUpgrade = vipUpgrade + 5;
                     vipCritChance = vipUpgrade;
                     vipUpgradeCost = (((vipUpgrade * 5) + (int)(vipUpgrade / 2)) + 1);
 
-                    scoreLabel.Text = "Low Taper Fades: " + score.ToString();
+                    label4.Text = "Low Taper Fades: " + score.ToString();
                     button4.Text = "Advertising effect chance: " + vipUpgrade + "%, Cost to upgrade: " + vipUpgradeCost;
 
 
@@ -188,7 +241,34 @@ namespace WinFormsApp1
                     button4.Text = "too broke :3";
                 }
             }
-            
+
+        }
+
+        private void markiplierCamPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void markNextImageButton_Click(object sender, EventArgs e)
+        {
+            newMarkImage();
+        }
+
+        private void markiplierImageResetTimer_Tick(object sender, EventArgs e)
+        {
+            //default runs 1000 times a second :fire::fire::100:
+            markiplierCamPictureBox.Image = Properties.Resources.markStatic;
+            markiplierImageResetTimer.Stop();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
